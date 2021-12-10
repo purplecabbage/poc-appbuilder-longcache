@@ -5,7 +5,7 @@ This app builder app demonstrates the difference between using aio-lib-state to 
 ## Tests and timing
 
 `loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/usecache  -n 500 -c 100`
-
+```
   ➜  poc-longcache loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/usecache  -n 500 -c 100
   Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
   Requests: 100 (20%), requests per second: 20, mean latency: 2747.7 ms
@@ -27,9 +27,11 @@ This app builder app demonstrates the difference between using aio-lib-state to 
     95%      5257 ms
     99%      5556 ms
    100%      6011 ms (longest request)
+```
 
 `loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/useparams  -n 500 -c 100`
 
+```
   ➜  poc-longcache loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/useparams  -n 500 -c 100
   Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
   
@@ -50,6 +52,7 @@ This app builder app demonstrates the difference between using aio-lib-state to 
     95%      1690 ms
     99%      1714 ms
    100%      1730 ms (longest request)
+```
 
 ## Deploy & Cleanup
 
