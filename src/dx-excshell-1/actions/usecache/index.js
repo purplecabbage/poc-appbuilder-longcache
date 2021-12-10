@@ -32,18 +32,21 @@ async function main (params) {
 
     // init when running in an Adobe I/O Runtime action (OpenWhisk) (uses env vars __OW_API_KEY and __OW_NAMESPACE automatically)
     const state = await stateLib.init()
-    const res = await state.get('privateValue')
-    let value = res?.value
-
-    if (!value) {
-      // put
-      value = crypto.randomBytes(2048).toString('hex')
-      await state.put('key', value)
+    let res1 = await state.get('privateValue1')
+    let res2 = await state.get('privateValue2')
+    if (!res1 || !res2) {
+      res1 = { value: crypto.randomBytes(2048).toString('hex') }
+      res2 = { value: crypto.randomBytes(2048).toString('hex') }
+      await state.put('privateValue1', res1.value)
+      await state.put('privateValue1', res2.value)
     }
 
     const response = {
       statusCode: 200,
-      body: value
+      body: { 
+        key1: res1.value, 
+        key2: res2.value
+      }
     }
 
     // log the response status code

@@ -26,14 +26,15 @@ async function main (params) {
     //   // return and log client errors
     //   return errorResponse(400, errorMessage, logger)
     // }
-
-    console.log('params = ', params)
     // extract the user Bearer token from the Authorization header
-    const token = getBearerToken(params)
+    // const token = getBearerToken(params)
 
     const response = {
       statusCode: 200,
-      body: params.privateValue
+      body: {
+        key1: params.key1,
+        key2: params.key2
+      }
     }
 
     // log the response status code
