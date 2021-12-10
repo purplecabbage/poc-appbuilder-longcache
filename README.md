@@ -6,7 +6,7 @@ This app builder app demonstrates the difference between using aio-lib-state to 
 
 
 ### usecache
-```
+```bash
   ➜  loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/usecache  -n 500 -c 100
   Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
   Requests: 276 (55%), requests per second: 55, mean latency: 1239.9 ms
@@ -33,7 +33,7 @@ This app builder app demonstrates the difference between using aio-lib-state to 
 
 ### useparams
 
-```
+```bash
   ➜  loadtest https://52381-poclongcache-stage.adobeioruntime.net/api/v1/web/dx-excshell-1/useparams  -n 500 -c 100
   Requests: 0 (0%), requests per second: 0, mean latency: 0 ms
   
